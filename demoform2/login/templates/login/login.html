@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Login</title>
+</head>
+<body>
+  <div class="login">
+    <form action="" method="post">
+<!-- method = post , post based class in views-->
+      <input type="text" name="username"></br>
+      <input type="password" name="username"></br>
+      <input type="submit" value="Đăng Nhập">
+        {% csrf_token %}
+    </form>
+  </div>
+
+</body>
+</html>

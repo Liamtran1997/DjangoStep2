@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Email</title>
+    <style>
+        .tuantran{
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+<form action="{% url 'news:process'  %}" method="post">
+    <h3>Tiêu đề :</h3>
+    <p>{{ mail.title }}</p>
+    <h3>Email :</h3>
+    <p>{{ mail.email }}</p>
+    <h3>Nội dung :</h3>
+    <p>{{ mail.content }}</p>
+    <h3>CC</h3>
+    <p>{{ mail.cc }}</p>
+    {% csrf_token %}
+    <input type="submit" value="Gửi Email!">
+</form>
+</body>
+</html>
